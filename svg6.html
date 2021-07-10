@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+         background: #000;
+  }
+svg{
+    position: absolute;
+    width: 400px;
+    fill: none;
+}
+svg:nth-child(2){
+    filter: blur(60px);
+}
+svg path{
+    d: path("M0,25 C150,110 150,-60 300,25");
+    stroke:rgb(73, 219, 73);
+    stroke-width: 50;
+    stroke-linecap: round;
+    transform: translate(50px,50%);
+    animation: anim 2s ease-in-out infinite;
+}
+
+@keyframes anim{
+    0%{
+        d: path("M0,25 C150,110 150,-60 300,25");
+        stroke: #ff0092;
+    }
+    50%{
+        d: path("M0,25 C160,-60 140,100 300,25");
+        stroke: #ff0092;
+    }
+}
+</style>
+<body>
+  <svg>
+      <path></path>
+  </svg> 
+  <svg>
+      <path></path>
+  </svg> 
+</body>
+</html>
